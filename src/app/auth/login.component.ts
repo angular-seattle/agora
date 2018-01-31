@@ -16,11 +16,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.firebaseAuth.authState.pipe(
+      // Only take events where the user is signed in
       filter((user) => !!user),
+      // Take one, so we don't need to unsubscribe
       take(1),
     ).subscribe((user) => {
       if (user) {
-        console.log('Auth changed ', user);
         this.router.navigate(['/']);
         this.status = user.email;
       }

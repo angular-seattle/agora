@@ -1,3 +1,11 @@
-<p>
-  dashboard works!
-</p>
+{{user}}
+<mat-card>
+  <mat-list>
+  <mat-list-item>
+  Secret word: {{word | async}}
+  </mat-list-item>
+  <mat-list-item>
+    <mat-checkbox></mat-checkbox>
+  </mat-list-item>
+</mat-list>
+</mat-card>

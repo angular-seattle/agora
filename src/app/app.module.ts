@@ -5,12 +5,17 @@ import { HttpModule } from '@angular/http';
 
 import { FormsModule } from '@angular/forms';
 import { 
+  MatButtonModule, 
+  MatCardModule,
+  MatCheckbox,
+  MatCheckboxModule,
+  MatDividerModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatSnackBarModule,
   MatTableModule,
   MatToolbarModule,
-  MatSnackBarModule,
-  MatInputModule,
-  MatIconModule,
-  MatButtonModule 
 } from '@angular/material';
 
 import {
@@ -35,6 +40,10 @@ import { AppRoutes } from './app.routes';
 @NgModule({
   exports: [
     MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDividerModule,
+    MatListModule,
     MatTableModule,
     MatToolbarModule,
     MatIconModule,
