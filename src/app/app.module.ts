@@ -26,7 +26,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login.component';
+import { AuthGuard } from './auth/auth-guard.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { environment } from '../environments/environment';
 import { AppRoutes } from './app.routes';
@@ -71,7 +72,9 @@ const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
     FirebaseUIModule.forRoot(firebaseUiAuthConfig),
     MaterialImportModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
