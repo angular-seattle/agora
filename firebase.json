@@ -10,6 +10,10 @@
       {
         "source": "/secret",
         "function": "secretWord"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   },

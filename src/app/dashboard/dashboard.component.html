@@ -1,11 +1,21 @@
-{{user}}
 <mat-card>
+  Welcome to ngSeattle, {{user}}!
+  <form>
   <mat-list>
   <mat-list-item>
-  Secret word: {{word | async}}
+    <mat-input-container class="full-width">
+      <input matInput ngModel placeholder="Enter the secret word" name="secretWord" required>
+    </mat-input-container>
   </mat-list-item>
   <mat-list-item>
-    <mat-checkbox></mat-checkbox>
+    <mat-checkbox ngModel name="invite"></mat-checkbox>&nbsp;Invite me to the Slack!
   </mat-list-item>
-</mat-list>
+  <mat-list-item>
+    <button mat-button (click)="update()">Update</button> <mat-progress-spinner *ngIf="updating"></mat-progress-spinner>
+    <span *ngIf="status">
+      {{status}}
+    </span>
+  </mat-list-item>
+  </mat-list>
+  </form>
 </mat-card>

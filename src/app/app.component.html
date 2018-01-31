@@ -1,3 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<button mat-button (click)="logout()">Logout</button>
+<mat-toolbar color="primary">
+    <img height=50 src="assets/ng-seattle.png">
+    <span>Angular Seattle</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-remaining-space"></span>
+
+    <span>
+      <button mat-button (click)="logout()">Logout</button>
+    </span>
+  </mat-toolbar>
 <router-outlet></router-outlet>

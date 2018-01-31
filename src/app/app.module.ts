@@ -1,17 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
-import { 
-  MatButtonModule, 
+import {
+  MatButtonModule,
   MatCardModule,
   MatCheckbox,
   MatCheckboxModule,
   MatDividerModule,
   MatIconModule,
   MatInputModule,
+  MatProgressSpinnerModule,
   MatListModule,
   MatSnackBarModule,
   MatTableModule,
@@ -44,6 +45,7 @@ import { AppRoutes } from './app.routes';
     MatCheckboxModule,
     MatDividerModule,
     MatListModule,
+    MatProgressSpinnerModule,
     MatTableModule,
     MatToolbarModule,
     MatIconModule,
@@ -74,7 +76,7 @@ const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
