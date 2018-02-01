@@ -11,7 +11,7 @@ const options = {
     allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token"],
     credentials: true,
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-    origin: true,
+    origin: "https://ng-seattle.info",
     preflightContinue: false
 };
 const app = express();

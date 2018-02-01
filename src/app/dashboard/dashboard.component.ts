@@ -17,14 +17,20 @@ export class DashboardComponent implements OnInit {
   private form: NgForm;
   updating = false;
   status = '';
-
-  word: Observable<{}>;
+  email = '';
   user = '';
+
   constructor(private http: HttpClient, private firebaseAuth: AngularFireAuth, private store: AngularFirestore) { }
 
   ngOnInit() {
     this.user = this.firebaseAuth.auth.currentUser.displayName;
-    this.word = this.store.collection('meetups').valueChanges().map(v => JSON.stringify(v));
+    setTimeout(() =>  {
+      this.form.setValue({
+        'email': this.firebaseAuth.auth.currentUser.email,
+        'secretWord': '',
+        invite: false
+      });
+    })
   }
 
   update() {
